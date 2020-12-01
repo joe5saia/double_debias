@@ -10,3 +10,4 @@
 
 # VScode Dev container
 .devcontainer/
+.vscode/settings.json
