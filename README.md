@@ -1,4 +1,7 @@
 # double_debias
+![Basic Build](https://github.com/joe5saia/double_debias/workflows/Double_Debias/badge.svg)
+
+
 This package implements the double debiased estimator from ["Double/Debiased Machine Learning for Treatment and Structural Parameters"](https://economics.mit.edu/files/12538)
 by Chernozhukov et. al. 
 
