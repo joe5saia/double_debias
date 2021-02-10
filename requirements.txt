@@ -1,0 +1,10 @@
+pandas
+numpy
+sqlalchemy
+psycopg2
+wheel
+matplotlib
+sklearn
+nose
+pytest
+twine
