@@ -2,10 +2,10 @@ name: Double_Debias
 on:
   push:
     branches:
-      - [ main ]
+      - main
   pull_request:
     branches:
-      - [ main ]
+      - main
 
 jobs:
   build:
