@@ -1,6 +1,10 @@
 name: Example workflow for Codecov
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+
 
 jobs:
   run:
