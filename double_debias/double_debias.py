@@ -1,10 +1,9 @@
-#%%
 import numpy as np
 import copy
 from sklearn.model_selection import KFold
 from sklearn.utils.validation import check_X_y
 
-#%%
+
 class double_debias:
     """
     Estimator class for implementing Double Debiased Learning algorithm.
