@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="double_debias_joe5saia",  # Replace with your own username
-    version="0.0.1",
+    name="double_debias",  # Replace with your own username
+    version="0.0.4",
     author="Joe Saia",
     author_email="joe5saia@gmail.com",
     description="Implements Double Debias Estimator",
