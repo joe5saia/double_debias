@@ -6,6 +6,19 @@ from sklearn.datasets import make_regression
 from sklearn.linear_model import LinearRegression
 
 
+def test_selector_check_():
+    X, y, w = make_regression(n_samples=10, n_informative=1, n_features=10, coef=True, random_state=1, bias=3.5, shuffle=False, noise=0.001)
+    dd = double_debias(y=y, D=X[:, :1], z=X[:, 1:], y_method=LinearRegression(), D_method=LinearRegression(), n_folds=3)
+    dd.selector_check_('y')
+    dd.selector_check_('D')
+    with pytest.raises(AttributeError):
+        dd.selector_check_('Y')
+    with pytest.raises(AttributeError):
+        dd.selector_check_('d')
+    with pytest.raises(AttributeError):
+        dd.selector_check_('p')
+
+
 def basetest(nregressors):
     # Linear regression with a bunch of meaningless regressors. Y~D + epsilon in the base model
     X, y, w = make_regression(n_samples=10000, n_informative=nregressors, n_features=10, coef=True, random_state=1, bias=3.5, shuffle=False, noise=0.001)
