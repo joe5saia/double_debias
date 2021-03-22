@@ -4,19 +4,19 @@ from sklearn.model_selection import KFold
 from sklearn.utils.validation import check_X_y
 
 
-class double_debias:
+class DoubleDebias:
     """
     Estimator class for implementing Double Debiased Learning algorithm.
 
     ---
 
     The model estimated is y ~ theta D + g(z) + e
-    After initializing object, double_debias.est_theta() estimates theta.
+    After initializing object, DoubleDebias.est_theta() estimates theta.
     """
 
     def __init__(self, y=None, D=None, z=None, D_method=None, y_method=None, n_folds=2):
         """
-        Constructor for the base information for double_debias
+        Constructor for the base information for DoubleDebias
 
         Arguments:
         ---

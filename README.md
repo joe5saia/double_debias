@@ -7,7 +7,7 @@ This package implements the double debiased estimator from ["Double/Debiased Mac
 by Chernozhukov et. al.
 
 # installation
-`pip install double_debias_joe5saia`
+`pip install double_debias`
 
 # Usage
 This package estimates models of the form y = theta D + g(z) + e where z is a high dimensional object.
@@ -15,7 +15,8 @@ This package estimates models of the form y = theta D + g(z) + e where z is a hi
 ```python
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.linear_model import LinearRegression
-dd = double_debias(y=np.array([i for i in range(0,10)]),
+from double_debias import DoubleDebias
+dd = DoubleDebias(y=np.array([i for i in range(0,10)]),
                    D= np.array([i//2 for i in range(0,10)]),
                    p.array([[i**2 for i in range(0,10)], [i**3 for i in range(0,10)]]).transpose(),
                    y_method= GradientBoostingRegressor(n_estimators=1000),
