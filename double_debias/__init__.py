@@ -1,1 +1,1 @@
-from .double_debias import double_debias
+from .double_debias import DoubleDebias
